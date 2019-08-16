@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.booksystem</groupId>
-	<artifactId>Hello world_intellij</artifactId>
+	<artifactId>Codility</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
 	<parent>
