@@ -1,8 +1,11 @@
 package Application;
 
+
 class Main {
 
 	public static void main(String[] args) {
-		System.out.println("java init");
+		Module4.Solution task=new Module4.Solution();
+		task.task3();
 	}
+
 }
