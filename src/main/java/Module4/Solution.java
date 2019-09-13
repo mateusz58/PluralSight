@@ -6,14 +6,13 @@ import static java.util.stream.Collectors.toCollection;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Random;
-import java.util.Set;
 import java.util.TreeSet;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -72,13 +71,24 @@ public class Solution {
             myFriendsFavoriteColors.put(5, "Blue");
             myFriendsFavoriteColors.put(6, "Orange");
             System.out.println("Values in second map: " + myFriendsFavoriteColors);
-            Map<Set<Integer>, Collection<String>> ourFavoriteColors = new HashMap<>();
-            ourFavoriteColors.put(myFavoriteColors.keySet(), myFavoriteColors.values());
-            ourFavoriteColors.put(myFriendsFavoriteColors.keySet(), myFriendsFavoriteColors.values());
+            Map<Integer, String> ourFavoriteColors = new HashMap<>();
+            Iterator itrMyFavouriteColors = myFavoriteColors.entrySet().iterator();
+            Iterator itrMyFriendsFavoriteColors = myFriendsFavoriteColors.entrySet().iterator();
+            while(itrMyFavouriteColors.hasNext()) {
+                    Map.Entry pair= (Map.Entry) itrMyFavouriteColors.next();
+                    ourFavoriteColors.put((Integer) pair.getKey(), pair.getValue().toString());
+                }
+            while(itrMyFriendsFavoriteColors.hasNext()) {
+                Map.Entry pair= (Map.Entry) itrMyFriendsFavoriteColors.next();
+                ourFavoriteColors.put((Integer) pair.getKey(), pair.getValue().toString());
+            }
+                int key = myFavoriteColors.entrySet().iterator().next().getKey();
+                String value = myFavoriteColors.entrySet().iterator().next().getValue();
+                ourFavoriteColors.put(key, value);
             System.out.println("Values in  map: " + ourFavoriteColors);
+            }
 
 
-    }
 
     public void task5() {
         LinkedList<Clock> cannons = new LinkedList<>();
