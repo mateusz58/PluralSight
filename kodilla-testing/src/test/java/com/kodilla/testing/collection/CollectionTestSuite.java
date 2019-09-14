@@ -15,43 +15,41 @@ public class CollectionTestSuite {
     OddNumbersExterminator oddNumbersExterminator;
 
     @Before
-    public void init()
-    {
+    public void init() {
         System.out.println("Exterminator tests started");
-        oddNumbersExterminator=new OddNumbersExterminator();
+        oddNumbersExterminator = new OddNumbersExterminator();
     }
 
     @Test
-    public void testOddNumbersExterminatorEmptyList()
-    {
+    public void testOddNumbersExterminatorEmptyList() {
         //Given
-        List<Integer>list=new ArrayList<>();
+        List<Integer> list = new ArrayList<>();
         //When
         oddNumbersExterminator.exterminate(list);
         //Then
         assertTrue(list.isEmpty());
     }
+
     @Test
-    public void testOddNumbersExterminatorNormalList()
-    {
+    public void testOddNumbersExterminatorNormalList() {
         //Given
-        List<Integer>listGiven=new ArrayList<>();
+        List<Integer> listGiven = new ArrayList<>();
         for (int i = 0; i < 30; i++) {
-            int number=NumberGenerator.generateRandomNumber(1,100);
-            if(number%2==0) {
+            int number = NumberGenerator.generateRandomNumber(1, 100);
+            if (number % 2 == 0) {
                 listGiven.add(number);
             }
         }
         //When
-        List<Integer>list=new ArrayList<>();
+        List<Integer> list = new ArrayList<>();
         list.addAll(oddNumbersExterminator.exterminate(listGiven));
         //then
-        assertEquals(list,listGiven);
+        assertEquals(list, listGiven);
 
     }
+
     @After
-    public void finish()
-    {
+    public void finish() {
         System.out.println("Exterminator tests finished");
     }
 
