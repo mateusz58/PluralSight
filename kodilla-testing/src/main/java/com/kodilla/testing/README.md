@@ -4,6 +4,7 @@
 
 1. Set up initial testing environment
 2. Test Sample User class
+3. Test Sample Calculator class
 
 
 ## Code style
