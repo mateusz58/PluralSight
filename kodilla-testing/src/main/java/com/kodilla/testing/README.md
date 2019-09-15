@@ -7,6 +7,7 @@
 3. Test Sample Calculator class
 4. Create Shape interface with Square,Triangle,Circle classes to implement it.
 Shape interface contains methods show() add() remove() get(n)  with methods 
+5. Create class OddNumbersExterminator with method to filter uneven element numbers and test it 
 
   
 
