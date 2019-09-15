@@ -1,27 +1,29 @@
 package com.kodilla.testing.collection;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
 
-import Generators.NumberGenerator;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import com.kodilla.testing.OddNumbersExterminator;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
 
 public class CollectionTestSuite {
 
     OddNumbersExterminator oddNumbersExterminator;
 
-    @Before
-    public void init() {
+    @BeforeEach
+    void init() {
         System.out.println("Exterminator tests started");
         oddNumbersExterminator = new OddNumbersExterminator();
     }
 
     @Test
-    public void testOddNumbersExterminatorEmptyList() {
+    void testOddNumbersExterminatorEmptyList() {
         //Given
         List<Integer> list = new ArrayList<>();
         //When
@@ -31,26 +33,15 @@ public class CollectionTestSuite {
     }
 
     @Test
-    public void testOddNumbersExterminatorNormalList() {
+    void testOddNumbersExterminatorNormalList() {
         //Given
-        List<Integer> listGiven = new ArrayList<>();
-        for (int i = 0; i < 30; i++) {
-            int number = NumberGenerator.generateRandomNumber(1, 100);
-            if (number % 2 == 0) {
-                listGiven.add(number);
-            }
-        }
+        List<Integer> listGiven = Arrays.asList(1,2,3,4,5,6,7,8);
         //When
-        List<Integer> list = new ArrayList<>();
-        list.addAll(oddNumbersExterminator.exterminate(listGiven));
+        List<Integer> listResult = new ArrayList<>();
+        List<Integer> listExpected = Arrays.asList(2,4,6,8);
+        listResult.addAll(oddNumbersExterminator.exterminate(listGiven));
         //then
-        assertEquals(list, listGiven);
-
-    }
-
-    @After
-    public void finish() {
-        System.out.println("Exterminator tests finished");
+        assertEquals(listExpected, listResult);
     }
 
 }

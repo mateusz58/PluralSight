@@ -5,6 +5,10 @@
 1. Set up initial testing environment
 2. Test Sample User class
 3. Test Sample Calculator class
+4. Create Shape interface with Square,Triangle,Circle classes to implement it.
+Shape interface contains methods show() add() remove() get(n)  with methods 
+
+  
 
 
 ## Code style

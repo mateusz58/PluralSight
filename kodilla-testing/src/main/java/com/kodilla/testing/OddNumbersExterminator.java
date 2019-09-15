@@ -1,4 +1,4 @@
-package com.kodilla.testing.collection;
+package com.kodilla.testing;
 
 import java.util.List;
 import java.util.stream.Collectors;
