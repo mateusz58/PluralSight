@@ -53,10 +53,10 @@ class BookLibraryTest {
             .thenReturn(givenListOf0);
 
         // When
-        List<Book> rersultListOf10Books = bookLibrary.listBooksWithCondition("An");
+        List<Book> rersultListOf0Books = bookLibrary.listBooksInHandsOf(user);
 
         // Then
-        assertEquals(0, rersultListOf10Books.size());
+        assertEquals(0, rersultListOf0Books.size());
         verify(libraryDatabaseMock, times(0)).listBooksWithCondition(anyString());
     }
 
@@ -103,6 +103,4 @@ class BookLibraryTest {
         assertEquals(parametr, rersultListOf5Books.size());
         verify(libraryDatabaseMock, times(0)).listBooksWithCondition(anyString());
     }
-
-
 }
