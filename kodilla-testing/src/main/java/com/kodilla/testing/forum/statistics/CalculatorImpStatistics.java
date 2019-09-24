@@ -1,10 +1,5 @@
 package com.kodilla.testing.forum.statistics;
 
-import lombok.Getter;
-import lombok.Setter;
-
-@Setter
-@Getter
 public class CalculatorImpStatistics  {
 
     private int usersQty;
