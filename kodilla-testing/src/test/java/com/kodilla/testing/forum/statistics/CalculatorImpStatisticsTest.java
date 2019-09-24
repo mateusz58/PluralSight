@@ -9,14 +9,13 @@ import java.util.ArrayList;
 import java.util.List;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.InjectMocks;
 
 class CalculatorImpStatisticsTest {
 
     CalculatorImpStatistics calculatorImpStatistics;
     private List<String> users;
 
-    @InjectMocks
+
     private Statistics statisticsMock;
 
     @BeforeEach
