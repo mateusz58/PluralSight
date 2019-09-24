@@ -6,7 +6,11 @@ public class StreamMain {
     {
         PoemBeautifier poemBeautifier=new PoemBeautifier();
 
-        String l=poemBeautifier.beautify("Beutify",(s->s.toUpperCase()));
+        String l1=poemBeautifier.beautify("Beutify",(s->s.toUpperCase()));
+
+        String l2=poemBeautifier.beautify("Beutify",(s->s.replace("e","z")));
+
+        String l3=poemBeautifier.beautify("Beutify",(s->s.replace("B","A")));
     }
 
 }
