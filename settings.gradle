@@ -8,4 +8,5 @@ include 'kodilla-modules-1-4'
 include 'kodilla-stream'
 include 'kodilla-stream'
 findProject(':kodilla-stream')?.name = 'com.kodilla.stream'
+include 'kodilla-exception'
 
