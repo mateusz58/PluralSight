@@ -1,6 +1,7 @@
 package com.kodilla.testing.forum.statistics;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
@@ -14,6 +15,7 @@ class CalculatorImpStatisticsTest {
 
     CalculatorImpStatistics calculatorImpStatistics;
     private List<String> users;
+
 
 
     private Statistics statisticsMock;
@@ -116,8 +118,8 @@ class CalculatorImpStatisticsTest {
     @Test
     void shouldCalculateAdvStatisticForSpecificCommentsHigherThanPosts() {
         //Given
-        when(statisticsMock.commentsCount()).thenReturn(1000);
-        when(statisticsMock.postsCount()).thenReturn(500);
+        doReturn(1000).when(statisticsMock).commentsCount();
+        doReturn(500).when(statisticsMock).postsCount();
         //When
         calculatorImpStatistics.calculateAdvStatistics(statisticsMock);
         double getCommentsAvgPerPost= calculatorImpStatistics.getCommentsAvgPerPost();

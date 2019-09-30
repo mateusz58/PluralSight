@@ -1,7 +1,5 @@
 ## <name>Kodilla programming course tasks
 
-
-
 ## Code style
 [![js-standard-style](https://img.shields.io/badge/code%20style-Google_Style-brightgreen.svg?style=flat)](https://github.com/checkstyle/checkstyle)
 
@@ -36,13 +34,3 @@
     - tools allows to simplify code especially for model classes by adding built in annotiations that allows to skip defining constructors,getters,setters and etc.      
 - [SonarLint](https://www.sonarlint.org)<br>
     - help building high quality code by spotting bugs and suggest removing unnecessary lines of codes
-
-
-
-   
-  
-
-
-
-
-
