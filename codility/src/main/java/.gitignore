@@ -22,7 +22,7 @@ target/
 *.ipr
 
 ## Application properties ##
-*.properties
+application.properties
 
 # Jar files ##
 *.jar
@@ -43,3 +43,5 @@ build/
 
 ### VS Code ###
 .vscode/
+
+Application/
