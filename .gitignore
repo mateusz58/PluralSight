@@ -6,7 +6,7 @@ target/
 !**/src/main/**
 !**/src/test/**
 
-### STS ###
+\#\#\# STS \#\#\#
 .apt_generated
 .classpath
 .factorypath
@@ -15,25 +15,25 @@ target/
 .springBeans
 .sts4-cache
 
-### IntelliJ IDEA ###
+\#\#\# IntelliJ IDEA \#\#\#
 *.idea
 *.iws
 *.iml
 *.ipr
 
-## Application properties ##
-*.properties
+\#\# Application properties \#\#
+application.properties
 
-# Jar files ##
+\# Jar files \#\#
 *.jar
 
-# cmd files ##
+\# cmd files \#\#
 *.cmd
 
-# mvnw file
+\# mvnw file
 mvnw
 
-### NetBeans ###
+\#\#\# NetBeans \#\#\#
 /nbproject/private/
 /nbbuild/
 /dist/
@@ -41,5 +41,5 @@ mvnw
 /.nb-gradle/
 build/
 
-### VS Code ###
+\#\#\# VS Code \#\#\#
 .vscode/

@@ -1,0 +1,6 @@
+[submodule "CodilitySolutions"]
+	path = CodilitySolutions
+	url = https://github.com/mateusz58/CodilitySolutions.git
+[submodule "LeetCodeSolutions"]
+	path = LeetCodeSolutions
+	url = https://github.com/mateusz58/LeetCodeSolutions.git
