@@ -69,15 +69,15 @@
 * What other String based classes do you know?
     1. [String joiner](https://docs.oracle.com/en/java/javase/12/docs/api/java.base/java/util/StringJoiner.html)
 * [What are JAVA annotations and how to make them?](https://dzone.com/articles/how-annotations-work-java)
-* 
+*
 * When do we use Object variables and when literals?
 * [What is the differecne between StringBuilder and StringBuffer?](https://www.samouczekprogramisty.pl/string-cache-i-stringbuilder-w-praktyce/)
 * What is constructor chaining in JAVA?
 * What is inversion of control?
 * [Whats the point of using interface?](https://www.evernote.com/shard/s516/sh/46c7e6b7-756d-4827-a50a-a51c0c6c9805/4f286434c1d6829a2c3fce260e4d4694)
-* [What is the difference between equals() and == in Java?](https://www.edureka.co/blog/interview-questions/java-interview-questions/#difference-between-equals-and==)
+* [What is the difference between equals() and == in Java?](https://www.evernote.com/shard/s516/client/snv?noteGuid=a124eaee-231a-4966-806c-01ae611b4fbc&noteKey=d327986e5d2855cbe5579f4ad94fd547&sn=https%3A%2F%2Fwww.evernote.com%2Fshard%2Fs516%2Fsh%2Fa124eaee-231a-4966-806c-01ae611b4fbc%2Fd327986e5d2855cbe5579f4ad94fd547&title=How%2Bdo%2BI%2Bcompare%2Bstrings%2Bin%2BJava%253F)
 * [Explain public static void main(String args[]) in Java](https://www.edureka.co/blog/interview-questions/java-interview-questions/#explain-public-static-void-main)
-* [Explain JDK JRE and JVM](https://www.edureka.co/blog/interview-questions/java-interview-questions/#Jdk-Jre-and-Jvm) 
+* [Explain JDK JRE and JVM](https://www.edureka.co/blog/interview-questions/java-interview-questions/#Jdk-Jre-and-Jvm)
 * Is Java *pass-by-value* or *pass-by-reference* ?
 * Write a Java method to swap the values of two integer values (*Is it possible ?*):
 ```Java
@@ -91,10 +91,11 @@ public void swap(int x, int y) { /** code here **/ }
 * Explain the usage of the following keyword: `final`.
 * Can you give example of a `final` class from the Java Standard library ?
 * What is the difference between `==` and `equals()` ?
-* Whats is a marker interface?
+* [Whats is a marker interface?](https://kodilla.com/pl/bootcamp-module/254/86/4606#151-singleton-zadanie-singleton-sluzacy-do-zapisywania-logow-z-wykonanych-operacji)
 * What is operator "?"  ?
 * [What does List<?> mean in java generics?](https://stackoverflow.com/questions/1844770/what-does-list-mean-in-java-generics)
 * [What is java reflection invocation?]()
+* [What is the difference between component scan and enable autoconfiguration]https://stackoverflow.com/questions/35005158/what-is-the-difference-between-componentscan-and-enableautoconfiguration-in-sp
 
 
 
@@ -108,12 +109,9 @@ public void swap(int x, int y) { /** code here **/ }
 * What are the SOLID statements?
 * What final statement change respectfully for class method and variable?
 
-
-
 ### Exercices
 
 * [What is the output of following program?](https://pastebin.com/uuFJ1wYt)
-
 
 ## File operations
 
@@ -123,7 +121,7 @@ public void swap(int x, int y) { /** code here **/ }
 
 * Can we implement multiple interfaces?
 * How would you solve a problem of multiple inheritance?
-* What is a **constructor** ?        
+* What is a **constructor** ?
 * What is the **default constructor** ?
 * Explain the the concept of *Inheritance*. Why doesn't Java supports the concept of *Multiple Inheritance* ?
 * What is **Polymorphism** ?
@@ -153,6 +151,7 @@ public void swap(int x, int y) { /** code here **/ }
 * [What does the generic nature of the class Class\<T> mean? What is T?](https://stackoverflow.com/questions/9406025/what-does-the-generic-nature-of-the-class-classt-mean-what-is-t)
 * [What is the good way of dealing with method overloading by implementing interface?](https://stackoverflow.com/questions/15843645/how-would-i-overload-method-in-an-interface)
 * [What is the point of implementing static interface in java?](https://www.geeksforgeeks.org/static-method-in-interface-in-java/)
+* [What is the pont of using static block?](http://namiekko.pl/2018/01/24/stale-w-javie-final-static-i-niemodyfikowalnosc/)
 
 ## Exceptions
 
@@ -182,7 +181,7 @@ public void swap(int x, int y) { /** code here **/ }
 
 ### Collection
 
-* What are the operations for which a **LinkedList** is more efficient than an **ArrayList** ?
+* [What are the operations for which a **LinkedList** is more efficient than an **ArrayList** ?](https://stackoverflow.com/questions/322715/when-to-use-linkedlist-over-arraylist-in-java)
 * What is the difference between **CopyOnWriteArrayList**, **Vector** and **ArrayList** ?
 * Are there any **Immutable** Collection Classes ?
 * [What is TreeSet and TreeMap and when to use it?](http://jsystems.pl/blog/artykul.html?id=145)
@@ -196,7 +195,7 @@ public void swap(int x, int y) { /** code here **/ }
 * Explan the differecne between hashmap and Hashset
 * Does a **Set** accepts `null` as an element ?
 
-### Stack 
+### Stack
 
 * How does a **Stack** data-structure works ? Are there any standard Java Stack implementations ?
 * Recursively calculate the sum of numbers from a `List<Integer>` (don't use for/do/while loops).
@@ -248,6 +247,7 @@ public void swap(int x, int y) { /** code here **/ }
 * What can you tell about the **Executor Interface** ?
 * What is a *Semaphore* in Java ?
 * What is the output if we execute the following code? :(https://pastebin.com/FpUJtVJJ)
+* How can you ensure that N threads can access N resources without a deadlock?
 ### Design Patterns
 
 
@@ -290,7 +290,7 @@ public void swap(int x, int y) { /** code here **/ }
 * IOC
 * Dependency injection
 * Repository
-  
+
 ### Java EE
 
 * What is a Servlet ?
@@ -331,7 +331,9 @@ public void swap(int x, int y) { /** code here **/ }
   * What is the difference betwwen @Repository @RestController and @Service
   * [What do you understand by auto wiring and name the different modes of it?](https://www.edureka.co/blog/interview-questions/spring-interview-questions/)
   * [What are the limitations with auto wiring?](https://www.edureka.co/blog/interview-questions/spring-interview-questions/)
-  
+  * [What is the point of using ApplicationContext class?](https://kodilla.com/pl/bootcamp-module/254/85/4606#141-inversion-of-control-i-dependency-injection-zadanie-bean-forumuser)
+  * [What is circular dependencies in spring?](https://www.baeldung.com/circular-dependencies-in-spring)
+
   #### Annotations:
 
   * [What’s the difference between @Component, @Controller, @Repository & @Service annotations in Spring?](https://www.edureka.co/blog/interview-questions/spring-interview-questions/)
@@ -343,7 +345,9 @@ public void swap(int x, int y) { /** code here **/ }
 * [How to manage and configure in spring boot?](https://docs.spring.io/spring-boot/docs/1.4.0.M3/reference/htmlsingle/#boot-features-testing-spring-boot-applications-detecting-config)
 * What is spring @Configuration and @Autoconfiguration annotation? *Explanation
 * Explain the concept of **Spring Profiles**.
-* * [What is the difference between @Profile and @ActiveProfiles?](https://stackoverflow.com/questions/44055969/in-spring-what-is-the-difference-between-profile-and-activeprofiles)
+* [What is the difference between @Profile and @ActiveProfiles?](https://stackoverflow.com/questions/44055969/in-spring-what-is-the-difference-between-profile-and-activeprofiles)
+*  [Explain the concept of ContextConfiguration](https://www.concretepage.com/spring-5/contextconfiguration-example-spring-test#XML)
+* [What is the difference between @ComponentScan and @EnableAutoConfiguration in Spring Boot?](https://stackoverflow.com/questions/35005158/what-is-the-difference-between-componentscan-and-enableautoconfiguration-in-sp)
 
 
 #### Spring batch service
@@ -375,7 +379,7 @@ public void swap(int x, int y) { /** code here **/ }
 * [ In Spring MVC framework, what is controller?](https://www.edureka.co/blog/interview-questions/spring-interview-questions/)
 * [What is the difference between @RequestParam and @PathVariable and when should we use each for Rest Controller?](https://prnt.sc/pev3zk)
 * [What is Request Mapping used for?](https://www.baeldung.com/spring-requestmapping)
-* 
+*
 
 #### Spring Data access
 * What are transactions?
@@ -390,9 +394,9 @@ public void swap(int x, int y) { /** code here **/ }
 
 * What is the differecne between jdbc and hibernate? *Explanation
 * When should we use jdbc and when should we use hibernate? *Explanation
-* What kind of jdbc operations can we do?  
+* What kind of jdbc operations can we do?
 * Which classes are present in spring JDBC API?(https://www.edureka.co/blog/interview-questions/spring-interview-questions/)
-* 
+*
 
 ##### Hibernate
 
@@ -462,7 +466,7 @@ public void swap(int x, int y) { /** code here **/ }
 #### Testing:
 * Whats is the best way to test database? H2 or docker by directly connecting to database* Explaining
 * What kind of ORM for databases do you know?
-* 
+*
 
 #### Transactions general questions
 
@@ -503,7 +507,7 @@ public void swap(int x, int y) { /** code here **/ }
 *Write an SQL query that returns one row containing the manager with the most direct subalterns.*
 
 ### Generic Questions
-* From a protocol perspective what is the difference between **UDP** and **TCP** ? 
+* From a protocol perspective what is the difference between **UDP** and **TCP** ?
 * What library would use to write a Scheduler in Java ?
 * What are the main **Maven** alternatives ?
 * What are the main **JUnit** alternatives ?
@@ -574,26 +578,28 @@ YES
 #### Core questions
 
 * [What are some common testing in spring boot improvements?](https://spring.io/blog/2016/04/15/testing-improvements-in-spring-boot-1-4)
-* 
+*
 
 #### Mockito
 
 * [What @inject annotation do]
 * [What is the differecne between Mockito.mock() vs @Mock vs @MockBean](https://www.baeldung.com/java-spring-mockito-mock-mockbean)
 * [Common mockito questions:](https://www.softwaretestinghelp.com/mockito-inteview-questions/)
-1. Why do we need mocking?
-2. [When and how should we mock?](https://blog.codecentric.de/en/2018/03/mock-what-when-how/)
-3. Difference between doReturn and thenReturn.
-4. When and why should a spy be used?
-5. Why can’t static methods be mocked using Mockito?
-6. What’s the need to verify that the mock was called?
-7. What is good testable code?
-8. What are the limitations of Mockito?
-9. Which frameworks can support mocking Private and Static methods?
-10. Mocking/Stubbing default methods in Interface in Java 8.
-11. How can order of stub invocations be verified in Mockito?
-12. Returning multiple values against consecutive method calls
-13. What are the different types of mocking frameworks and how do they work?
+1. [Why do we need mocking?](https://www.toptal.com/java/a-guide-to-everyday-mockito)
+2. When do we use @injectMock, @Mock and @MockBean?
+3. [When and how should we mock?](https://blog.codecentric.de/en/2018/03/mock-what-when-how/)
+4. Difference between doReturn and thenReturn.
+5. [When and why should a spy be used?](https://www.toptal.com/java/a-guide-to-everyday-mockito)
+6. Why can’t static methods be mocked using Mockito?
+7. What’s the need to verify that the mock was called?
+8. What is good testable code?
+9. What are the limitations of Mockito?
+10. Which frameworks can support mocking Private and Static methods?
+11. Mocking/Stubbing default methods in Interface in Java 8.
+12. [How can order of stub invocations be verified in Mockito?](https://www.toptal.com/java/a-guide-to-everyday-mockito)
+13. Returning multiple values against consecutive method calls
+14. What are the different types of mocking frameworks and how do they work?
+15. [When is it better not to use mockito?](http://prntscr.com/px5vng)
 
 #### Integration tests
 
@@ -613,5 +619,4 @@ YES
 
 
 
-    
-    
+
