@@ -61,6 +61,7 @@
 
 ## General Questions
 
+* [what is the difference between parseInteger and valueOf?](https://stackoverflow.com/questions/508665/difference-between-parseint-and-valueof-in-java)
 * [What is transient variable?](https://www.java67.com/2012/08/what-is-transient-variable-in-java.html)
 * [What is the the difference between hot spot and hot swap?](https://stackoverflow.com/questions/16568253/difference-between-jvm-and-hotspot)
 * [What is the difference between object from reference and variable](https://www.samouczekprogramisty.pl/referencja-sterta-garbage-collector/)
@@ -171,6 +172,7 @@ public void swap(int x, int y) { /** code here **/ }
 * Name 3 **Checked Exceptions**.
 * What are **Java Annotations** ?
 * [Name some important methods of JAVA Exception Class](https://www.tutorialspoint.com/java/java_exceptions.htm)
+* [what is run time exception?](http://www.speedypc.com/articles/runtime_exception.aspx)
 
 
 ## Algorithms and Data Structures / Collections / Generics
