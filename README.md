@@ -63,6 +63,7 @@
 
 * [what is the difference between parseInteger and valueOf?](https://stackoverflow.com/questions/508665/difference-between-parseint-and-valueof-in-java)
 * [What is transient variable?](https://www.java67.com/2012/08/what-is-transient-variable-in-java.html)
+* [What is binary search and when to use it?](https://www.javatpoint.com/binary-search-in-java)
 * [What is the the difference between hot spot and hot swap?](https://stackoverflow.com/questions/16568253/difference-between-jvm-and-hotspot)
 * [What is the difference between object from reference and variable](https://www.samouczekprogramisty.pl/referencja-sterta-garbage-collector/)
 * Why is not possible to use primitives as generic types ?
