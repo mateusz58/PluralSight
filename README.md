@@ -95,7 +95,7 @@ public void swap(int x, int y) { /** code here **/ }
 * What is operator "?"  ?
 * [What does List<?> mean in java generics?](https://stackoverflow.com/questions/1844770/what-does-list-mean-in-java-generics)
 * [What is java reflection invocation?]()
-* [What is the difference between component scan and enable autoconfiguration]https://stackoverflow.com/questions/35005158/what-is-the-difference-between-componentscan-and-enableautoconfiguration-in-sp
+* [What is the difference between component scan and enable autoconfiguration?](https://stackoverflow.com/questions/35005158/)
 
 
 
@@ -106,7 +106,7 @@ public void swap(int x, int y) { /** code here **/ }
 
 ### Clean code
 * [Name YAGNI statements](https://www.martinfowler.com/bliki/Yagni.html)
-* What are the SOLID statements?
+* [What are the SOLID statements?](https://scotch.io/bar-talk/s-o-l-i-d-the-first-five-principles-of-object-oriented-design)
 * What final statement change respectfully for class method and variable?
 
 ### Exercices
@@ -302,6 +302,9 @@ public void swap(int x, int y) { /** code here **/ }
 
 #### Spring core questions
 
+* What is @SpringBoot annotation?:
+  * [Stackoverflow source](https://stackoverflow.com/questions/36387265/disable-all-database-related-auto-configuration-in-spring-boot)
+  * [Integration tests](https://konstructcomputers.blogspot.com/2018/10/slimming-down-spring-boot-app-for.html)
 * [Explain component scan](https://www.greycampus.com/blog/programming/top-spring-interview-questions-and-answers)*Explanation
 * [What is application context?](https://stackoverflow.com/questions/9689131/what-does-application-context-in-spring-do)*Explanation
 * [How to switch *.properties file that you are referencing to?](http://prntscr.com/pi2ht5)
@@ -333,6 +336,7 @@ public void swap(int x, int y) { /** code here **/ }
   * [What are the limitations with auto wiring?](https://www.edureka.co/blog/interview-questions/spring-interview-questions/)
   * [What is the point of using ApplicationContext class?](https://kodilla.com/pl/bootcamp-module/254/85/4606#141-inversion-of-control-i-dependency-injection-zadanie-bean-forumuser)
   * [What is circular dependencies in spring?](https://www.baeldung.com/circular-dependencies-in-spring)
+  * [How to create bean on some conditions in spring boot?](https://iamninad.com/conditional-bean-creation-in-spring-boot/)
 
   #### Annotations:
 
@@ -363,7 +367,7 @@ public void swap(int x, int y) { /** code here **/ }
 * [What is csrf?](https://pl.wikipedia.org/wiki/Cross-site_request_forgery)
 * [When do we need csrf?](https://stackoverflow.com/questions/2023395/rest-and-csrf-cross-site-request-forgery)
 * What kind of authentication are known to you?
-* What kind of authorizations are knows to you?
+* [What is cors?](https://sekurak.pl/czym-jest-cors-cross-origin-resource-sharing-i-jak-wplywa-na-bezpieczenstwo/)
 
 #### Spring WEB questions
 
@@ -465,8 +469,6 @@ public void swap(int x, int y) { /** code here **/ }
 
 #### Testing:
 * Whats is the best way to test database? H2 or docker by directly connecting to database* Explaining
-* What kind of ORM for databases do you know?
-*
 
 #### Transactions general questions
 
