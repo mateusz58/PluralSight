@@ -42,6 +42,7 @@
       - [Logger](#logger)
       - [Spring code examples](#spring-code-examples)
     - [Generic WEB](#generic-web)
+      - [Execices](#execices)
     - [SQL and relational database](#sql-and-relational-database)
       - [SQL Language](#sql-language)
       - [Testing:](#testing)
@@ -61,11 +62,12 @@
 
 ## General Questions
 
+* [what is the difference between Integer.parseInteger and Integer.valueOf?](https://stackoverflow.com/questions/508665/difference-between-parseint-and-valueof-in-java)
 * [What is transient variable?](https://www.java67.com/2012/08/what-is-transient-variable-in-java.html)
+* [What is binary search and when to use it?](https://www.javatpoint.com/binary-search-in-java)
 * [What is the the difference between hot spot and hot swap?](https://stackoverflow.com/questions/16568253/difference-between-jvm-and-hotspot)
 * [What is the difference between object from reference and variable](https://www.samouczekprogramisty.pl/referencja-sterta-garbage-collector/)
-* Why is not possible to use primitives as generic types ?
-
+* [Why is not possible to use primitives as generic types ?](https://stackoverflow.com/questions/2721546/why-dont-java-generics-support-primitive-types)
 * What other String based classes do you know?
     1. [String joiner](https://docs.oracle.com/en/java/javase/12/docs/api/java.base/java/util/StringJoiner.html)
 * [What are JAVA annotations and how to make them?](https://dzone.com/articles/how-annotations-work-java)
@@ -73,26 +75,25 @@
 * When do we use Object variables and when literals?
 * [What is the differecne between StringBuilder and StringBuffer?](https://www.samouczekprogramisty.pl/string-cache-i-stringbuilder-w-praktyce/)
 * What is constructor chaining in JAVA?
-* What is inversion of control?
 * [Whats the point of using interface?](https://www.evernote.com/shard/s516/sh/46c7e6b7-756d-4827-a50a-a51c0c6c9805/4f286434c1d6829a2c3fce260e4d4694)
 * [What is the difference between equals() and == in Java?](https://www.evernote.com/shard/s516/client/snv?noteGuid=a124eaee-231a-4966-806c-01ae611b4fbc&noteKey=d327986e5d2855cbe5579f4ad94fd547&sn=https%3A%2F%2Fwww.evernote.com%2Fshard%2Fs516%2Fsh%2Fa124eaee-231a-4966-806c-01ae611b4fbc%2Fd327986e5d2855cbe5579f4ad94fd547&title=How%2Bdo%2BI%2Bcompare%2Bstrings%2Bin%2BJava%253F)
 * [Explain public static void main(String args[]) in Java](https://www.edureka.co/blog/interview-questions/java-interview-questions/#explain-public-static-void-main)
 * [Explain JDK JRE and JVM](https://www.edureka.co/blog/interview-questions/java-interview-questions/#Jdk-Jre-and-Jvm)
-* Is Java *pass-by-value* or *pass-by-reference* ?
+* [Is Java *pass-by-value* or *pass-by-reference* ?](https://www.javaworld.com/article/2077424/learn-java-does-java-pass-by-reference-or-pass-by-value.html)
 * Write a Java method to swap the values of two integer values (*Is it possible ?*):
 ```Java
 public void swap(int x, int y) { /** code here **/ }
 ```
 * What is a *primitive type* in Java ? What are the main *primitive types* ?
-* What is *auto-boxing/unboxing* ?
-* What is *implicit casting* ? What is *explicit casting* ?
+* [What is *auto-boxing/unboxing* ?](https://docs.oracle.com/javase/tutorial/java/data/autoboxing.html)
+* [What is *implicit casting* ? What is *explicit casting* ?](https://www.quora.com/What-is-the-difference-between-the-implicit-type-casting-and-explicit-type-casting-in-C++)
 * If developing an e-commerce site, what is the recommend type to use for the *price* if performance is not an issue. What is performance is an issue ?
 * Explain the usage of the following keywords: `strictfp`, `native`.
 * Explain the usage of the following keyword: `final`.
 * Can you give example of a `final` class from the Java Standard library ?
 * What is the difference between `==` and `equals()` ?
 * [Whats is a marker interface?](https://kodilla.com/pl/bootcamp-module/254/86/4606#151-singleton-zadanie-singleton-sluzacy-do-zapisywania-logow-z-wykonanych-operacji)
-* What is operator "?"  ?
+* [What is operator "?"](https://www.baeldung.com/java-ternary-operator)
 * [What does List<?> mean in java generics?](https://stackoverflow.com/questions/1844770/what-does-list-mean-in-java-generics)
 * [What is java reflection invocation?]()
 * [What is the difference between component scan and enable autoconfiguration?](https://stackoverflow.com/questions/35005158/)
@@ -108,6 +109,7 @@ public void swap(int x, int y) { /** code here **/ }
 * [Name YAGNI statements](https://www.martinfowler.com/bliki/Yagni.html)
 * [What are the SOLID statements?](https://scotch.io/bar-talk/s-o-l-i-d-the-first-five-principles-of-object-oriented-design)
 * What final statement change respectfully for class method and variable?
+* [KISS and DRY principles?](https://dzone.com/articles/software-design-principles-dry-and-kiss)
 
 ### Exercices
 
@@ -170,7 +172,9 @@ public void swap(int x, int y) { /** code here **/ }
 * Name 3 **Unchecked Exceptions**.
 * Name 3 **Checked Exceptions**.
 * What are **Java Annotations** ?
+* [Why is it recommended to use try with resources over try catch finally?](https://devcave.pl/effective-java/preferuj-try-with-resources)
 * [Name some important methods of JAVA Exception Class](https://www.tutorialspoint.com/java/java_exceptions.htm)
+* [what is run time exception?](http://www.speedypc.com/articles/runtime_exception.aspx)
 
 
 ## Algorithms and Data Structures / Collections / Generics
@@ -302,11 +306,13 @@ public void swap(int x, int y) { /** code here **/ }
 
 #### Spring core questions
 
+* [What is the difference between spring and spring boot?](https://dzone.com/articles/understanding-the-basics-of-spring-vs-spring-boot)
+* [What is inversion of control?](https://stackoverflow.com/questions/3058/what-is-inversion-of-control)
 * What is @SpringBoot annotation?:
   * [Stackoverflow source](https://stackoverflow.com/questions/36387265/disable-all-database-related-auto-configuration-in-spring-boot)
   * [Integration tests](https://konstructcomputers.blogspot.com/2018/10/slimming-down-spring-boot-app-for.html)
-* [Explain component scan](https://www.greycampus.com/blog/programming/top-spring-interview-questions-and-answers)*Explanation
-* [What is application context?](https://stackoverflow.com/questions/9689131/what-does-application-context-in-spring-do)*Explanation
+* [Explain component scan](https://www.greycampus.com/blog/programming/top-spring-interview-questions-and-answers)
+* [What is application context?](https://stackoverflow.com/questions/9689131/what-does-application-context-in-spring-do)*check
 * [How to switch *.properties file that you are referencing to?](http://prntscr.com/pi2ht5)
 * What is Spring?
 * List benefits of IOS?
@@ -320,8 +326,8 @@ public void swap(int x, int y) { /** code here **/ }
 * What is **Spring Boot** ?
 * What is **Spring Integration** ?
 * What is **Spring Batch** ?
-* What is spring boot stereotype? *Explanation
-* [Explain how bean works in spring boot](https://www.codingame.com/playgrounds/2096/playing-around-with-spring-bean-configuration) *Explanation
+* What is spring boot stereotype? *check
+* [Explain how bean works in spring boot](https://www.codingame.com/playgrounds/2096/playing-around-with-spring-bean-configuration) *check
 * [Name the types of transaction management that Spring supports?](https://www.edureka.co/blog/interview-questions/spring-interview-questions/)
 * [What are the different features of Spring Framework?](https://www.edureka.co/blog/interview-questions/spring-interview-questions/)
 * [What is spring configuration file?](https://www.edureka.co/blog/interview-questions/spring-interview-questions/)
@@ -347,7 +353,7 @@ public void swap(int x, int y) { /** code here **/ }
 #### Spring configuration
 
 * [How to manage and configure in spring boot?](https://docs.spring.io/spring-boot/docs/1.4.0.M3/reference/htmlsingle/#boot-features-testing-spring-boot-applications-detecting-config)
-* What is spring @Configuration and @Autoconfiguration annotation? *Explanation
+* What is spring @Configuration and @Autoconfiguration annotation? *check
 * Explain the concept of **Spring Profiles**.
 * [What is the difference between @Profile and @ActiveProfiles?](https://stackoverflow.com/questions/44055969/in-spring-what-is-the-difference-between-profile-and-activeprofiles)
 *  [Explain the concept of ContextConfiguration](https://www.concretepage.com/spring-5/contextconfiguration-example-spring-test#XML)
@@ -356,7 +362,7 @@ public void swap(int x, int y) { /** code here **/ }
 
 #### Spring batch service
 
-* [What is batch processing when to use it and how to use it?](https://spring.io/guides/gs/batch-processing/) *Explanation
+* [What is batch processing when to use it and how to use it?](https://spring.io/guides/gs/batch-processing/) *check
 
 #### Spring security
 
@@ -396,19 +402,19 @@ public void swap(int x, int y) { /** code here **/ }
 
 ##### Spring JDBC
 
-* What is the differecne between jdbc and hibernate? *Explanation
-* When should we use jdbc and when should we use hibernate? *Explanation
+* What is the differecne between jdbc and hibernate? *check
+* When should we use jdbc and when should we use hibernate? *check
 * What kind of jdbc operations can we do?
 * Which classes are present in spring JDBC API?(https://www.edureka.co/blog/interview-questions/spring-interview-questions/)
 *
 
 ##### Hibernate
 
-* What is hibernate
-* Benefits of using hibernate
-* Hibernate architecture
-* Get and load differences
-* Advantages of Hibernate over JDBC
+* What is hibernate?
+* Benefits of using hibernate?
+* Hibernate architecture?
+* Get and load differences?
+* Advantages of Hibernate over JDBC?
 * [How to load hibernate to postgresql through properties file?](http://prntscr.com/pih0dn)
 * Explain how cache works in hibernate? * 2 levels of caching
 * In what case should we use HQL?
@@ -444,7 +450,10 @@ public void swap(int x, int y) { /** code here **/ }
 * What is the difference between **POST** and **PUT** ?
 * What is the difference between **POST** and **PATCH** ?
 * What is the difference between **POST** and **GET** ?
-* When do we use TRACE? *Explanation
+* When do we use TRACE? *check
+
+#### Execices
+
 * You have to develop a *REST API* for a book store. This API needs to implement CRUD-like operations. How would you design the API ?
 
 | Operation | HTTP VERB | ENDPOINT |
@@ -607,8 +616,8 @@ YES
 
 
 1. [What are F.I.R.S.T principles?](https://pivotal.io/application-modernization-recipes/testing/spring-boot-testing-best-practices)
-2. Do integration tests for game would make sense? *Explanation
-3. Do mockito tests would make sense for making a game?*Explanation
+2. Do integration tests for game would make sense? *check
+3. Do mockito tests would make sense for making a game?*check
 4. [Whats is the point of doing integration tests?](https://reflectoring.io/spring-boot-test/)
 5. [Example of doing integration test for BasicAuth](https://www.baeldung.com/spring-security-integration-tests)
 6. What kind of integration tests in SpringBoot do you know?
