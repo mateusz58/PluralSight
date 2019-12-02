@@ -2,6 +2,7 @@
 
 - [Java Interview Questions](#java-interview-questions)
   - [General Questions](#general-questions)
+    - [Regular expression](#regular-expression)
     - [Memory management](#memory-management)
     - [Clean code](#clean-code)
     - [Exercices](#exercices)
@@ -99,6 +100,10 @@ public void swap(int x, int y) { /** code here **/ }
 * [What is the difference between component scan and enable autoconfiguration?](https://stackoverflow.com/questions/35005158/)
 
 
+### Regular expression 
+* [What ways of dealing with regular expression do you know?](https://stackoverflow.com/questions/19409708/pattern-matcher-vs-string-split-which-should-i-use)
+* [Regular expression](https://www.samouczekprogramisty.pl/wyrazenia-regularne-w-jezyku-java/)
+
 
 ### Memory management
 * [What are different types of garbage collector in JAVA?](https://javapapers.com/java/types-of-java-garbage-collectors/)
@@ -165,6 +170,7 @@ public void swap(int x, int y) { /** code here **/ }
 * Exception hierarchy
 * Custom Exception
 * Important methods of Java Exception Class
+* [How to handle multiple exceptions on one block?](https://www.journaldev.com/629/java-catch-multiple-exceptions-rethrow-exception)
 * [What is block try with resources and when do we use it?](https://www.samouczekprogramisty.pl/konstrukcja-try-with-resources-w-jezyku-java/)
 * What are context managers?
 * **Unchecked Exceptions** vs. **Checked Exceptions**.
@@ -189,8 +195,10 @@ public void swap(int x, int y) { /** code here **/ }
 * What is the difference between **CopyOnWriteArrayList**, **Vector** and **ArrayList** ?
 * Are there any **Immutable** Collection Classes ?
 * [What is TreeSet and TreeMap and when to use it?](http://jsystems.pl/blog/artykul.html?id=145)
+* [What is the difference between vecotr and arraylist in java?](https://javapapers.com/core-java/java-collection/difference-between-vector-and-arraylist-in-java/)
 
 ### Map
+* [What is hashtable in java?](https://javapapers.com/core-java/java-hashtable/)
 * What is map and name few classes that implement Map interface?
 * [What is the best way to convert user defined object to hashmap?](https://www.mkyong.com/java/java-convert-object-to-map-example/)
 * Explain how a **HashMap** is implemented. What is the relationship between *equals()* and *hashCode()*.
@@ -286,7 +294,7 @@ public void swap(int x, int y) { /** code here **/ }
 #### Design pattern connection questions
 * Whats is the difference between proxy and adapter design pattern
 * Most common usage of builder design pattern
-* How can singelton design pattern help with concurreny?
+* How can singleton design pattern help with concurreny?
 * [How can you use Singleton Design Pattern in JavaFx ?](https://blog.axxg.de/javafx-stage-singleton/)
 
 
@@ -306,6 +314,7 @@ public void swap(int x, int y) { /** code here **/ }
 
 #### Spring core questions
 
+* [What is spring context?](https://dzone.com/articles/what-is-a-spring-context)
 * [What is the difference between spring and spring boot?](https://dzone.com/articles/understanding-the-basics-of-spring-vs-spring-boot)
 * [What is inversion of control?](https://stackoverflow.com/questions/3058/what-is-inversion-of-control)
 * What is @SpringBoot annotation?:
@@ -374,6 +383,9 @@ public void swap(int x, int y) { /** code here **/ }
 * [When do we need csrf?](https://stackoverflow.com/questions/2023395/rest-and-csrf-cross-site-request-forgery)
 * What kind of authentication are known to you?
 * [What is cors?](https://sekurak.pl/czym-jest-cors-cross-origin-resource-sharing-i-jak-wplywa-na-bezpieczenstwo/)
+* What kind of authorization methods do you know name advantages and disadvantages of famous authorization method?
+* [What are token and what kind of tokens are you familiar with?](https://i.imgur.com/HIXbBeB.png)
+* [What is token structure?](https://i.imgur.com/qXrtWr8.png)
 
 #### Spring WEB questions
 
@@ -402,7 +414,7 @@ public void swap(int x, int y) { /** code here **/ }
 
 ##### Spring JDBC
 
-* What is the differecne between jdbc and hibernate? *check
+* What is the difference between jdbc and hibernate? *check
 * When should we use jdbc and when should we use hibernate? *check
 * What kind of jdbc operations can we do?
 * Which classes are present in spring JDBC API?(https://www.edureka.co/blog/interview-questions/spring-interview-questions/)
@@ -475,6 +487,7 @@ public void swap(int x, int y) { /** code here **/ }
 * [How to get latest inserted id?](https://pastebin.com/kNydLaBT)
 * [How to get last inserted row from table?](https://pastebin.com/8p1LUDj1)
 * [How to perform Cascade deleting in database?](https://stackoverflow.com/questions/129265/cascade-delete-just-once)
+* [What are database indexes?](https://www.w3schools.com/sql/sql_create_index.asp)
 
 #### Testing:
 * Whats is the best way to test database? H2 or docker by directly connecting to database* Explaining
