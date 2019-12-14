@@ -257,9 +257,17 @@ public void swap(int x, int y) { /** code here **/ }
 * Explain the concept of **Thread Starvation** ?
 * Explain the concept of **Thread Pool** ?
 * What can you tell about the **Executor Interface** ?
-* What is a *Semaphore* in Java ?
+* [What is a *Semaphore* in Java ?](https://www.baeldung.com/java-semaphore)
+  * [Implementation](concurrency/src/main/java/core-java-concurrency-basic/src/main/java/com/baeldung/concurrent/semaphore/SemaPhoreDemo.java)
 * What is the output if we execute the following code? :(https://pastebin.com/FpUJtVJJ)
 * How can you ensure that N threads can access N resources without a deadlock?
+* [What is thread life cycle?](https://www.baeldung.com/java-thread-lifecycle)
+  * [New State implementation](concurrency/src/main/java/core-java-concurrency-basics-2/src/main/java/com/baeldung/concurrent/threadlifecycle/NewState.java)
+  * [Blocked State](concurrency/core-java-concurrency-basics-2/src/main/java/concurrent/threadlifecycle/BlockedState.java)
+  * [RunnableState](concurrency/core-java-concurrency-basics-2/src/main/java/concurrent/threadlifecycle/RunnableState.java)
+  *  [TerminatedState](concurrency/core-java-concurrency-basics-2/src/main/java/concurrent/threadlifecycle/TerminatedState.java)
+  *  [WaitingState](concurrency/core-java-concurrency-basics-2/src/main/java/concurrent/threadlifecycle/WaitingState.java)
+  *  [TimedWaitingState](concurrency/core-java-concurrency-basics-2/src/main/java/concurrent/threadlifecycle/TimedWaitingState.java)
 ### Design Patterns
 
 
@@ -386,6 +394,7 @@ public void swap(int x, int y) { /** code here **/ }
 * What kind of authorization methods do you know name advantages and disadvantages of famous authorization method?
 * [What are token and what kind of tokens are you familiar with?](https://i.imgur.com/HIXbBeB.png)
 * [What is token structure?](https://i.imgur.com/qXrtWr8.png)
+* [What is SSL?](https://pl.wikipedia.org/wiki/Transport_Layer_Security)
 
 #### Spring WEB questions
 
