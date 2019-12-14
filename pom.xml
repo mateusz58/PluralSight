@@ -9,7 +9,8 @@
 	<version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
     <modules>
-		<module>tddspringboot</module>
+		<module>tddspringboot-sql</module>
+        <module>tdd-springboot-nosql</module>
     </modules>
 
 	<properties>

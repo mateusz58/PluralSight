@@ -8,12 +8,12 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <groupId>com.tddspringboot</groupId>
-    <artifactId>tddspringboot</artifactId>
+    <groupId>com.tddspringboot-sql</groupId>
+    <artifactId>tddspringboot-sql</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>tddspringboot</name>
+    <name>tddspringboot-sql</name>
     <description>tdd spring boot</description>
 
     <properties>
