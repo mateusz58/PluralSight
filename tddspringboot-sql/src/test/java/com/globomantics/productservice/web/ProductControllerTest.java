@@ -53,39 +53,39 @@ class ProductControllerTest {
     @DisplayName("GET /product/1 - Found")
     void testGetProductByIdFound() throws Exception {
 
-        //Given
+        
        doReturn(Optional.of(mockProduct)).when(service).findById(mockProduct.getId());
 
-       //When
+       
         mockMvc.perform(get(String.format("%s%d", url,mockProduct.getId())))
-            //Validate reponse code and content type
+            
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
 
-            //Validate the headers
+            
             .andExpect(header().string(HttpHeaders.ETAG, "\"1\""))
             .andExpect(header().string(HttpHeaders.LOCATION, String.format("%s%d", url,mockProduct.getId())))
 
-            //Validate returned field
+            
             .andExpect(content().json(objectMapper.writeValueAsString(mockProduct)));
     }
     @Test
     @DisplayName("GET /product/1 - Not Found")
     void testGetProductByIdNotFound() throws Exception {
-        // Setup our mocked service
+        
         doReturn(Optional.empty()).when(service).findById(1);
 
-        // Execute the GET request
+        
         mockMvc.perform(get("/product/{id}", 1))
 
-            // Validate that we get a 404 Not Found response
+            
             .andExpect(status().isNotFound());
     }
 
     @Test
     @DisplayName("POST /product - Success")
     void testCreateProduct() throws Exception {
-        // Setup mocked service
+        
         Product postProduct = new Product("Product Name", 10);
         Product mockProduct = new Product(1, "Product Name", 10, 1);
         doReturn(mockProduct).when(service).save(any());
@@ -94,15 +94,15 @@ class ProductControllerTest {
             .contentType(MediaType.APPLICATION_JSON)
             .content(asJsonString(postProduct)))
 
-            // Validate the response code and content type
+            
             .andExpect(status().isCreated())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
 
-            // Validate the headers
+            
             .andExpect(header().string(HttpHeaders.ETAG, "\"1\""))
             .andExpect(header().string(HttpHeaders.LOCATION, "/product/1"))
 
-            // Validate the returned fields
+            
             .andExpect(jsonPath("$.id", is(1)))
             .andExpect(jsonPath("$.name", is("Product Name")))
             .andExpect(jsonPath("$.quantity", is(10)))
@@ -112,7 +112,7 @@ class ProductControllerTest {
     @Test
     @DisplayName("PUT /product/1 - Success")
     void testProductPutSuccess() throws Exception {
-        // Setup mocked service
+        
         Product putProduct = new Product("Product Name", 10);
         Product mockProduct = new Product(1, "Product Name", 10, 1);
         doReturn(Optional.of(mockProduct)).when(service).findById(1);
@@ -123,15 +123,15 @@ class ProductControllerTest {
             .header(HttpHeaders.IF_MATCH, 1)
             .content(asJsonString(putProduct)))
 
-            // Validate the response code and content type
+            
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
 
-            // Validate the headers
+            
             .andExpect(header().string(HttpHeaders.ETAG, "\"2\""))
             .andExpect(header().string(HttpHeaders.LOCATION, "/product/1"))
 
-            // Validate the returned fields
+            
             .andExpect(jsonPath("$.id", is(1)))
             .andExpect(jsonPath("$.name", is("Product Name")))
             .andExpect(jsonPath("$.quantity", is(10)))
@@ -141,7 +141,7 @@ class ProductControllerTest {
     @Test
     @DisplayName("PUT /product/1 - Version Mismatch")
     void testProductPutVersionMismatch() throws Exception {
-        // Setup mocked service
+        
         Product putProduct = new Product("Product Name", 10);
         Product mockProduct = new Product(1, "Product Name", 10, 2);
         doReturn(Optional.of(mockProduct)).when(service).findById(1);
@@ -152,14 +152,14 @@ class ProductControllerTest {
             .header(HttpHeaders.IF_MATCH, 1)
             .content(asJsonString(putProduct)))
 
-            // Validate the response code and content type
+            
             .andExpect(status().isConflict());
     }
 
     @Test
     @DisplayName("PUT /product/1 - Not Found")
     void testProductPutNotFound() throws Exception {
-        // Setup mocked service
+        
         Product putProduct = new Product("Product Name", 10);
         doReturn(Optional.empty()).when(service).findById(1);
 
@@ -168,21 +168,21 @@ class ProductControllerTest {
             .header(HttpHeaders.IF_MATCH, 1)
             .content(asJsonString(putProduct)))
 
-            // Validate the response code and content type
+            
             .andExpect(status().isNotFound());
     }
 
     @Test
     @DisplayName("DELETE /product/1 - Success")
     void testProductDeleteSuccess() throws Exception {
-        // Setup mocked product
+        
         Product mockProduct = new Product(1, "Product Name", 10, 1);
 
-        // Setup the mocked service
+        
         doReturn(Optional.of(mockProduct)).when(service).findById(1);
         doReturn(true).when(service).delete(1);
 
-        // Execute our DELETE request
+        
         mockMvc.perform(delete("/product/{id}", 1))
             .andExpect(status().isOk());
     }
@@ -190,10 +190,10 @@ class ProductControllerTest {
     @Test
     @DisplayName("DELETE /product/1 - Not Found")
     void testProductDeleteNotFound() throws Exception {
-        // Setup the mocked service
+        
         doReturn(Optional.empty()).when(service).findById(1);
 
-        // Execute our DELETE request
+        
         mockMvc.perform(delete("/product/{id}", 1))
             .andExpect(status().isNotFound());
     }
@@ -201,14 +201,14 @@ class ProductControllerTest {
     @Test
     @DisplayName("DELETE /product/1 - Failure")
     void testProductDeleteFailure() throws Exception {
-        // Setup mocked product
+        
         Product mockProduct = new Product(1, "Product Name", 10, 1);
 
-        // Setup the mocked service
+        
         doReturn(Optional.of(mockProduct)).when(service).findById(1);
         doReturn(false).when(service).delete(1);
 
-        // Execute our DELETE request
+        
         mockMvc.perform(delete("/product/{id}", 1))
             .andExpect(status().isInternalServerError());
     }

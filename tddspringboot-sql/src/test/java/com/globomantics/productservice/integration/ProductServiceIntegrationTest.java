@@ -69,7 +69,7 @@ class ProductServiceIntegrationTest {
     }
 
     public ConnectionHolder getConnectionHolder() {
-        // Return a function that retrieves a connection from our data source
+        
         return () -> dataSource.getConnection();
     }
 
@@ -77,50 +77,50 @@ class ProductServiceIntegrationTest {
     @DisplayName("GET /product/1 - Found")
     
     void testGetProductByIdFound() throws Exception {
-        // Execute the GET request
+        
         mockMvc.perform(get("/product/{id}", 1))
 
-            // Validate the response code and content type
+            
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
 
-            // Validate the headers
+            
             .andExpect(header().string(HttpHeaders.ETAG, "\"1\""))
             .andExpect(header().string(HttpHeaders.LOCATION, "/product/1"))
 
-            // Validate the returned fields
+            
             .andExpect(content().json(mapper.writeValueAsString(repository.findById(1))));
     }
 
     @Test
     @DisplayName("GET /product/99 - Not Found")
     void testGetProductByIdNotFound() throws Exception {
-        // Execute the GET request
+        
         mockMvc.perform(get("/product/{id}", 99))
 
-            // Validate that we get a 404 Not Found response
+            
             .andExpect(status().isNotFound());
     }
 
     @Test
     @DisplayName("POST /product - Success")
     void testCreateProduct() throws Exception {
-        // Setup product to create
+        
         Product postProduct = new Product("Product Name", 10);
 
         mockMvc.perform(post("/product")
             .contentType(MediaType.APPLICATION_JSON)
             .content(asJsonString(postProduct)))
 
-            // Validate the response code and content type
+            
             .andExpect(status().isCreated())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
 
-            // Validate the headers
+            
             .andExpect(header().string(HttpHeaders.ETAG, "\"1\""))
             .andExpect(header().exists(HttpHeaders.LOCATION))
 
-            // Validate the returned fields
+            
             .andExpect(jsonPath("$.id", any(Integer.class)))
             .andExpect(jsonPath("$.name", is("Product Name")))
             .andExpect(jsonPath("$.quantity", is(10)))
@@ -130,7 +130,7 @@ class ProductServiceIntegrationTest {
     @Test
     @DisplayName("PUT /product/2 - Success")
     void testProductPutSuccess() throws Exception {
-        // Setup product to update
+        
         Product putProduct = new Product("Product 2 Updated", 10);
 
         mockMvc.perform(put("/product/{id}", 2)
@@ -138,15 +138,15 @@ class ProductServiceIntegrationTest {
             .header(HttpHeaders.IF_MATCH, 2)
             .content(asJsonString(putProduct)))
 
-            // Validate the response code and content type
+            
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
 
-            // Validate the headers
+            
             .andExpect(header().string(HttpHeaders.ETAG, "\"3\""))
             .andExpect(header().string(HttpHeaders.LOCATION, "/product/2"))
 
-            // Validate the returned fields
+            
             .andExpect(jsonPath("$.id", is(2)))
             .andExpect(jsonPath("$.name", is("Product 2 Updated")))
             .andExpect(jsonPath("$.quantity", is(10)))
@@ -156,7 +156,7 @@ class ProductServiceIntegrationTest {
     @Test
     @DisplayName("PUT /product/1 - Version Mismatch")
     void testProductPutVersionMismatch() throws Exception {
-        // Setup product to update
+        
         Product putProduct = new Product("Product Name", 10);
 
         mockMvc.perform(put("/product/{id}", 1)
@@ -164,14 +164,14 @@ class ProductServiceIntegrationTest {
             .header(HttpHeaders.IF_MATCH, 7)
             .content(asJsonString(putProduct)))
 
-            // Validate the response code and content type
+            
             .andExpect(status().isConflict());
     }
 
     @Test
     @DisplayName("PUT /product/99 - Not Found")
     void testProductPutNotFound() throws Exception {
-        // Setup product to update
+        
         Product putProduct = new Product("Product Name", 10);
 
         mockMvc.perform(put("/product/{id}", 99)
@@ -179,14 +179,14 @@ class ProductServiceIntegrationTest {
             .header(HttpHeaders.IF_MATCH, 1)
             .content(asJsonString(putProduct)))
 
-            // Validate the response code and content type
+            
             .andExpect(status().isNotFound());
     }
     @Test
     @DisplayName("DELETE /product/1 - Success")
     
     void testProductDeleteSuccess() throws Exception {
-        // Execute our DELETE request
+        
         mockMvc.perform(delete("/product/{id}", 1))
             .andExpect(status().isOk());
     }
@@ -194,7 +194,7 @@ class ProductServiceIntegrationTest {
     @Test
     @DisplayName("DELETE /product/99 - Not Found")
     void testProductDeleteNotFound() throws Exception {
-        // Execute our DELETE request
+        
         mockMvc.perform(delete("/product/{id}", 99))
             .andExpect(status().isNotFound());
     }

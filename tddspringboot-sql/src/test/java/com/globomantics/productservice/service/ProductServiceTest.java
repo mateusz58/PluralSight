@@ -18,24 +18,18 @@ import java.util.Optional;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 
-/**
- * Tests the ProductService.
- */
+
 @ExtendWith(SpringExtension.class)
 @SpringBootTest
 class ProductServiceTest {
 
-    /**
-     * The service that we want to test.
-     */
+    
     @Autowired
     private ProductService service;
 
     Product mockProduct = new Product(1, "Product Name", 10, 1);
 
-    /**
-     * A mock version of the ProductRepository for use in our tests.
-     */
+    
     @MockBean
     private ProductRepository repository;
 
@@ -52,26 +46,26 @@ class ProductServiceTest {
     @Test
     @DisplayName("Test findById Not Found")
     void testFindByIdNotFound() {
-        // Setup our mock
+        
         Product mockProduct = new Product(1, "Product Name", 10, 1);
         doReturn(Optional.empty()).when(repository).findById(1);
 
-        // Execute the service call
+        
         Optional<Product> returnedProduct = service.findById(1);
 
-        // Assert the response
+        
         Assertions.assertFalse(returnedProduct.isPresent(), "Product was found, when it shouldn't be");
     }
 
     @Test
     @DisplayName("Test findAll")
     void testFindAll() {
-        // Setup our mock
+        
         Product mockProduct = new Product(1, "Product Name", 10, 1);
         Product mockProduct2 = new Product(2, "Product Name 2", 15, 3);
         doReturn(Arrays.asList(mockProduct, mockProduct2)).when(repository).findAll();
 
-        // Execute the service call
+        
         List<Product> products = service.findAll();
 
         Assertions.assertEquals(2, products.size(), "findAll should return 2 products");

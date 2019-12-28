@@ -58,13 +58,13 @@ public class ProductRepositoryTest {
 
     @Test
     void testFindByIdSuccess() {
-        // Find the product with ID 2
+        
         Optional<Product> product = repository.findById(2);
 
-        // Validate that we found it
+        
         Assertions.assertTrue(product.isPresent(), "Product with ID 2 should be found");
 
-        // Validate the product values
+        
         Product p = product.get();
         Assertions.assertEquals(2, p.getId().intValue(), "Product ID should be 2");
         Assertions.assertEquals("Product 2", p.getName(), "Product name should be \"Product 2\"");
@@ -74,25 +74,25 @@ public class ProductRepositoryTest {
 
     @Test
     void testFindByIdNotFound() {
-        // Find the product with ID 2
+        
         Optional<Product> product = repository.findById(3);
 
-        // Validate that we found it
+        
         Assertions.assertFalse(product.isPresent(), "Product with ID 3 should be not be found");
     }
 
     @Test
     void testSave() {
-        // Create a new product and save it to the database
+        
         Product product = new Product("Product 5", 5);
         product.setVersion(1);
         Product savedProduct = repository.save(product);
 
-        // Validate the saved product
+        
         Assertions.assertEquals("Product 5", savedProduct.getName());
         Assertions.assertEquals(5, savedProduct.getQuantity().intValue());
 
-        // Validate that we can get it back out of the database
+        
         Optional<Product> loadedProduct = repository.findById(savedProduct.getId());
         Assertions.assertTrue(loadedProduct.isPresent(), "Could not reload product from the database");
         Assertions.assertEquals("Product 5", loadedProduct.get().getName(), "Product name does not match");
@@ -102,14 +102,14 @@ public class ProductRepositoryTest {
 
     @Test
     void testUpdateSuccess() {
-        // Update product 1's name, quantity, and version
+        
         Product product = new Product(1, "This is product 1", 100, 5);
         boolean result  = repository.update(product);
 
-        // Validate that our product is returned by update()
+        
         Assertions.assertTrue(result, "The product should have been updated");
 
-        // Retrieve product 1 from the database and validate its fields
+        
         Optional<Product> loadedProduct = repository.findById(1);
         Assertions.assertTrue(loadedProduct.isPresent(), "Updated product should exist in the database");
         Assertions.assertEquals("This is product 1", loadedProduct.get().getName(), "The product name does not match");
@@ -119,11 +119,11 @@ public class ProductRepositoryTest {
 
     @Test
     void testUpdateFailure() {
-        // Update product 1's name, quantity, and version
+        
         Product product = new Product(3, "This is product 3", 100, 5);
         boolean result = repository.update(product);
 
-        // Validate that our product is returned by update()
+        
         Assertions.assertFalse(result, "The product should not have been updated");
     }
 
@@ -132,7 +132,7 @@ public class ProductRepositoryTest {
         boolean result = repository.delete(1);
         Assertions.assertTrue(result, "Delete should return true on success");
 
-        // Validate that the product has been deleted
+        
         Optional<Product> product = repository.findById(1);
         Assertions.assertFalse(product.isPresent(), "Product with ID 1 should have been deleted");
     }

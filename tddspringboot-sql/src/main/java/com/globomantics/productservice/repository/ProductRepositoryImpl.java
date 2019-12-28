@@ -28,7 +28,7 @@ public class ProductRepositoryImpl implements ProductRepository {
     public ProductRepositoryImpl(JdbcTemplate jdbcTemplate, DataSource dataSource) {
         this.jdbcTemplate = jdbcTemplate;
 
-        // Build a SimpleJdbcInsert object from the specified data source
+        
         this.simpleJdbcInsert = new SimpleJdbcInsert(dataSource)
             .withTableName("products")
             .usingGeneratedKeyColumns("id");
@@ -67,21 +67,21 @@ public class ProductRepositoryImpl implements ProductRepository {
 
     @Override
     public Product save(Product product) {
-        // Build the product parameters we want to save
+        
         Map<String, Object> parameters = new HashMap<>(1);
         parameters.put("name", product.getName());
         parameters.put("quantity", product.getQuantity());
         parameters.put("version", product.getVersion());
 
-        // Execute the query and get the generated key
+        
         Number newId = simpleJdbcInsert.executeAndReturnKey(parameters);
 
         logger.info("Inserting product into database, generated key is: {}", newId);
 
-        // Update the product's ID with the new key
+        
         product.setId((Integer) newId);
 
-        // Return the complete product
+        
         return product;
     }
 

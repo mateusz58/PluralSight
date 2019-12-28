@@ -23,12 +23,7 @@ public class ProductController {
         this.productService = productService;
     }
 
-    /**
-     * Returns the product with the specified ID.
-     *
-     * @param id The ID of the product to retrieve.
-     * @return The product with the specified ID.
-     */
+    
     @GetMapping("/product/{id}")
     public ResponseEntity<?> getProduct(@PathVariable Integer id) {
 
@@ -47,31 +42,22 @@ public class ProductController {
             .orElse(ResponseEntity.notFound().build());
     }
 
-    /**
-     * Returns all products in the database.
-     *
-     * @return All products in the database.
-     */
+    
     @GetMapping("/products")
     public Iterable<Product> getProducts() {
         return productService.findAll();
     }
 
-    /**
-     * Creates a new product.
-     *
-     * @param product The product to create.
-     * @return The created product.
-     */
+    
     @PostMapping("/product")
     public ResponseEntity<Product> createProduct(@RequestBody Product product) {
         logger.info("Creating new product with name: {}, quantity: {}", product.getName(), product.getQuantity());
 
-        // Create the new product
+        
         Product newProduct = productService.save(product);
 
         try {
-            // Build a created response
+            
             return ResponseEntity
                 .created(new URI("/product/" + newProduct.getId()))
                 .eTag(Integer.toString(newProduct.getVersion()))
@@ -88,18 +74,18 @@ public class ProductController {
         logger.info("Updating product with id: {}, name: {}, quantity: {}",
             id, product.getName(), product.getQuantity());
 
-        // Get the existing product
+        
         Optional<Product> existingProduct = productService.findById(id);
 
         return existingProduct.map(p -> {
-            // Compare the etags
+            
             logger.info("Product with ID: " + id + " has a version of " + p.getVersion()
                 + ". Update is for If-Match: " + ifMatch);
             if (!p.getVersion().equals(ifMatch)) {
                 return ResponseEntity.status(HttpStatus.CONFLICT).build();
             }
 
-            // Update the product
+            
             p.setName(product.getName());
             p.setQuantity(product.getQuantity());
             p.setVersion(p.getVersion() + 1);
@@ -110,7 +96,7 @@ public class ProductController {
                 + ", version=" + p.getVersion());
 
             try {
-                // Update the product and return an ok response
+                
                 if (productService.update(p)) {
                     return ResponseEntity.ok()
                         .location(new URI("/product/" + p.getId()))
@@ -120,7 +106,7 @@ public class ProductController {
                     return ResponseEntity.notFound().build();
                 }
             } catch (URISyntaxException e) {
-                // An error occurred trying to create the location URI, return an error
+                
                 return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
             }
 
@@ -132,7 +118,7 @@ public class ProductController {
 
         logger.info("Deleting product with ID {}", id);
 
-        // Get the existing product
+        
         Optional<Product> existingProduct = productService.findById(id);
 
         return existingProduct.map(p -> {

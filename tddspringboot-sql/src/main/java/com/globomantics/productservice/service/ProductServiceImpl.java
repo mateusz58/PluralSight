@@ -40,7 +40,7 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public Product save(Product product) {
-        // Set the product version to 1 as we're adding a new product to the database
+        
         product.setVersion(1);
 
         logger.info("Save product to the database: {}", product);
