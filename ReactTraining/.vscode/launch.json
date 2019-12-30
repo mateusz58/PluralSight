@@ -7,6 +7,12 @@
       "name": "Launch firefox",
       "url": "http://localhost:3000/",
       "webRoot": "${workspaceFolder}"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch Places",
+      "program": "${workspaceFolder}/src/javaScriptsTraining.js"
     }
   ]
 }

@@ -1,8 +1,3 @@
-import React, { Component } from "react";
-import ReactDOM from "react-dom";
-import "./App.css";
-import Invoice from "./Invoice.js";
-
 // const render = () => {
 //   document.getElementById("mountnode").innerHTML;
 // };
