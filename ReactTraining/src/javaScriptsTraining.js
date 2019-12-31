@@ -44,14 +44,24 @@ const square = a => {
 [1, 2, 3, 4].map(a => a * a);
 
 //////////////////////////////////////////////
+
+// getting reference of object
 const mystery = "answer";
+const Inverse = 1 / Math.PI;
 
 const obj = {
   p1: 10, // property
   p2: 20, // property that holds a function
   f1() {}, //property that holds regular function
-  f2: () => {} // property that holds array function
+  f2: () => {},
+  [mystery]: 42,
+  Inverse // property that holds array function
 };
 
-console.log(obj.mystery);
+//we call reference of mystery
+// console.log(obj.answer);
+
+// console.log(obj.Inverse);
 /////////////////////////////////////
+
+// destructuring syntax
