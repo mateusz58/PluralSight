@@ -1,6 +1,3 @@
-// const render = () => {
-//   document.getElementById("mountnode").innerHTML;
-// };
 const timeUpdate = () => {
   ReactDOM.render(
     React.createElement(
