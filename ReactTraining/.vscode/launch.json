@@ -14,5 +14,11 @@
       "name": "Launch Places",
       "program": "${workspaceFolder}/src/javaScriptsTraining.js"
     }
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch Places 2",
+      "program": "${workspaceFolder}/src/javaScriptTrainingClasses.js"
+    }
   ]
 }

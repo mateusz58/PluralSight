@@ -1,4 +1,4 @@
-////Introduced let and const
+/////////////// Difference between constant and let  : arrow and regular ///////////////////////////////////////////
 
 const val1 = 1;
 
@@ -16,7 +16,7 @@ const Y = () => {
   console.log();
 };
 
-//difference between two functions
+/////////////// Difference between two functions : arrow and regular ///////////////////////////////////////////
 
 const testerObj = {
   // standart function
@@ -31,7 +31,7 @@ const testerObj = {
   }
   //
 };
-//////////////////////////////////////////////
+//////////////////////////////////////////////  external calls /////////////////////////
 /// external calls
 const square1 = function(a) {
   return a * a;
@@ -43,7 +43,7 @@ const square = a => {
 
 [1, 2, 3, 4].map(a => a * a);
 
-//////////////////////////////////////////////
+//////////////////////////////ASSIGNING PROPERTIES To OBJECT /////////////////////////////////
 
 // getting reference of object
 const mystery = "answer";
@@ -58,10 +58,75 @@ const obj = {
   Inverse // property that holds array function
 };
 
+// console.log(mystery);
+
 //we call reference of mystery
 // console.log(obj.answer);
 
+// we call Inverse here
+
 // console.log(obj.Inverse);
-/////////////////////////////////////
+///////////////////STRUCTURING AND DESTRUCTURING /////////////////////////
+
+const { Component, Fragment, useState } = require("react");
 
 // destructuring syntax
+
+// standard declaration
+// const PI = Math.PI;
+// const E = Math.E;
+// const SQRT2 = Math.SQRT2;
+
+const { PI, E, SQRT2 } = Math;
+
+const circle = {
+  label: "circleX",
+  radius: 2
+};
+
+// circle are function that accept object as an argument
+const circleArea = ({ radius }, { precision = 2 }) =>
+  (PI * radius * radius).toFixed(precision);
+
+// console.log(
+//   circleArea(circle)
+// );)
+
+// console.log(circleArea(circle, { precision: 5 }));
+
+///////////// REST OPERATOR ////////////////////////////////////
+
+///this is equivalent of tail in some languages
+// main differebce between these two:
+
+const [first, ...restItems] = [10, 20, 30, 40]; // this is an array
+
+const { first2, ...restItems2 } = [10, 20, 30, 40]; // this is hashmap
+
+const data = {
+  temp1: "001",
+  temp2: "002",
+  name1: "name1",
+  name2: "name2"
+};
+
+const { temp1, temp2, ...person } = data;
+
+const newArray = [...restItems];
+
+// console.log(restItems[0]);
+
+console.log(data.person);
+// console.log(data.temp2);
+
+///////////////////////TEMPLATE STRINGS ////////////////////////////////
+
+// normal string init
+const object1 = "Hello";
+
+const html = `
+<div>
+${Math.random()}
+</div>`;
+
+console.log(html);
