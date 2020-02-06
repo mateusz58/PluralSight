@@ -11,6 +11,10 @@
 
     <artifactId>tdd-springboot-wiremock</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <modules>
+        <module>scaffolding-spring-boot-angular-jhipster</module>
+    </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -86,8 +90,8 @@
                 <configuration>
                     <!--                    <excludes>-->
                     <!--                        <exclude>/pl/coderstrust/model/*.class</exclude>-->
-                    <!--                        <exclude>/pl/coderstrust/database/hibernate/*.class</exclude>-->
-                    <!--                        <exclude>/pl/coderstrust/database/mongo/*.class</exclude>-->
+                    <!--                        <exclude>/pl/coderstrust/databaseItems/hibernate/*.class</exclude>-->
+                    <!--                        <exclude>/pl/coderstrust/databaseItems/mongo/*.class</exclude>-->
                     <!--                        <exclude>/pl/coderstrust/Application.class</exclude>-->
                     <!--                    </excludes>-->
                 </configuration>
@@ -177,12 +181,12 @@
             <version>2.5.4</version>
         </dependency>
         <dependency>
-            <groupId>com.github.database-rider</groupId>
+            <groupId>com.github.databaseItems-rider</groupId>
             <artifactId>rider-core</artifactId>
             <version>1.2.10</version>
         </dependency>
         <dependency>
-            <groupId>com.github.database-rider</groupId>
+            <groupId>com.github.databaseItems-rider</groupId>
             <artifactId>rider-junit5</artifactId>
             <version>1.2.10</version>
         </dependency>

@@ -12,6 +12,7 @@
 		<module>tddspringboot-sql</module>
         <module>tdd-springboot-nosql</module>
         <module>tdd-springboot-wiremock</module>
+        <module>angular-spring-boot-jhipster</module>
     </modules>
 
 	<properties>

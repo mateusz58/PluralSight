@@ -27,6 +27,18 @@ class SubHero extends Hero {
 const object = new Hero("hero");
 const object2 = new SubHero("hero", "subhero");
 
-console.log(object.hi);
+// console.log(object.hi);
 
 ////////////////////// promise objects usage /////
+
+//promise objects
+
+const fetchData = async () => {
+  const resp = await fetch("http://api.github.com");
+
+  const data = await resp.json();
+
+  console.log(data);
+};
+
+fetchData();

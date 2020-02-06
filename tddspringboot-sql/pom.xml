@@ -90,8 +90,8 @@
                 <configuration>
                     <!--                    <excludes>-->
                     <!--                        <exclude>/pl/coderstrust/model/*.class</exclude>-->
-                    <!--                        <exclude>/pl/coderstrust/database/hibernate/*.class</exclude>-->
-                    <!--                        <exclude>/pl/coderstrust/database/mongo/*.class</exclude>-->
+                    <!--                        <exclude>/pl/coderstrust/databaseItems/hibernate/*.class</exclude>-->
+                    <!--                        <exclude>/pl/coderstrust/databaseItems/mongo/*.class</exclude>-->
                     <!--                        <exclude>/pl/coderstrust/Application.class</exclude>-->
                     <!--                    </excludes>-->
                 </configuration>
@@ -181,12 +181,12 @@
             <version>2.5.4</version>
         </dependency>
         <dependency>
-            <groupId>com.github.database-rider</groupId>
+            <groupId>com.github.databaseItems-rider</groupId>
             <artifactId>rider-core</artifactId>
             <version>1.2.10</version>
         </dependency>
         <dependency>
-            <groupId>com.github.database-rider</groupId>
+            <groupId>com.github.databaseItems-rider</groupId>
             <artifactId>rider-junit5</artifactId>
             <version>1.2.10</version>
         </dependency>
@@ -247,6 +247,18 @@
         <dependency>
             <groupId>org.mongodb</groupId>
             <artifactId>mongodb-driver</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.github.databaseNbp-rider</groupId>
+            <artifactId>rider-junit5</artifactId>
+            <version>1.2.10</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.github.database-rider</groupId>
+            <artifactId>rider-junit5</artifactId>
+            <version>1.2.10</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 </project>
