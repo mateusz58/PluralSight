@@ -1,0 +1,39 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.pluralsight.patientportal"
+    },
+    "jhipsterVersion": "6.7.0",
+    "applicationType": "monolith",
+    "baseName": "PatientPortal",
+    "packageName": "com.pluralsight.patientportal",
+    "packageFolder": "com/pluralsight/patientportal",
+    "serverPort": "8080",
+    "authenticationType": "session",
+    "cacheProvider": "no",
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "rememberMeKey": "7276491714451daffc2e533f30411bc33dd4ba972032806df434001cf2090dcb7627249fd034ad6eaef0b5c9e6df3cfe54f2",
+    "embeddableLaunchScript": false,
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "clientFramework": "angularX",
+    "clientTheme": "simplex",
+    "clientThemeVariant": "primary",
+    "creationTimestamp": 1581036444731,
+    "testFrameworks": ["protractor"],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "blueprints": []
+  }
+}
